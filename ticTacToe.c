@@ -32,6 +32,17 @@ struct gameState {
   enum board currentPlayer;
 };
 
+//function prototypes
+void initBoard(struct gameState *game);
+void printLine(void);
+void printBoard(struct gameState *game);
+
+int main(void) {
+  struct gameState game;
+  initBoard(&game);
+  playGame(&game);
+  return 0;
+}
 // initialises the board to default values.
 void initBoard(struct gameState *game) {
   for (int i = 0; i < ROWS; i++) {
