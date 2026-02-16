@@ -23,7 +23,6 @@ enum board {
 // false (0)
 struct tile {
   enum board mark;
-  
 };
 
 //the player coordinates
@@ -45,11 +44,10 @@ int main(void) {
 }
 // initialises the board to default values.
 void initBoard(struct gameState *game) {
-  for (int i = 0; i < ROWS; i++) {
-      for (int j = 0; j < COLS; j++) {
-          game->box[i][j].board = NONE;
-          game->box[i][j].value = 0;
-      }
+  for (int i = 0; i < ROWS; i ++) {
+    for (int j = 0; j < COLS; j++) {
+      game->box[i][j].mark = NONE;
+    }
   }
   game->currentPlayer = X;
 }
